@@ -1,0 +1,10 @@
+/.idea
+/anaconda_projects
+/.ipynb_checkpoints
+.virtual_documents/see_data.ipynb
+/data
+preprocess/analize_data_pandas.py
+preprocess/analize_data_polars.py
+preprocess/info
+/reutilizabile/__pycache__
+reutilizabile/__init__.py
