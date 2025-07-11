@@ -8,3 +8,5 @@ preprocess/analize_data_polars.py
 preprocess/info
 /reutilizabile/__pycache__
 reutilizabile/__init__.py
+*.csv
+/reutilizabile/.ipynb_checkpoints

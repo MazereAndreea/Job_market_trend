@@ -28,3 +28,16 @@ def parse_benefits_string(benefits_str):
 
 def applybenefits(benefits_str):
     benefits = parse_benefits_string(benefits_str)
+
+def parse_experience(exp):
+    years = exp.replace("Years", "").strip().split("to")
+    return int((int(years[0]) + int(years[1])) / 2)
+
+def company_aggregation(c,low_33,high_67):
+    if c <= low_33:
+        return 'Small'
+    elif c <= high_67:
+        return 'Medium'
+    else:
+        return 'Large'
+    
