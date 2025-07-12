@@ -1,4 +1,5 @@
 /.idea
+git-filter-repo
 /anaconda_projects
 /.ipynb_checkpoints
 .virtual_documents/see_data.ipynb
