@@ -1,0 +1,15 @@
+version: "3.8"
+
+services:
+  app:
+    build: .
+    container_name: jobmarket_container
+    volumes:
+      - /home/andreea/compute/app:/app
+    ports:
+      - "8888:8888"
+    image: andreeamaz/job_market_trend:latest
+    env_file:
+      - .env
+    working_dir: /app
+    command: jupyter notebook --ip=0.0.0.0 --port=8888 --no-browser --allow-root --notebook-dir=/app

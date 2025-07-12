@@ -1,3 +1,4 @@
+
 from reutilizabile.common_imports import np,pd
 
 def missing_data(data):
@@ -48,4 +49,3 @@ def unique_values(data):
 
 def save_changes(data, filename="data.csv"):
     data.to_csv(filename, index=False)
-    return data

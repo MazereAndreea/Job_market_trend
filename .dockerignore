@@ -1,0 +1,46 @@
+# 🔒 Secrets & credentials
+.env
+*.pem
+*.key
+*.crt
+*.p12
+*.json
+*.csv
+azure_credentials/
+secrets/
+private_key_openssh
+
+# 📦 Python-specific
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg
+*.egg-info/
+*.whl
+dist/
+build/
+
+# 🐳 Docker & dev artifacts
+Dockerfile~
+docker-compose.yml~
+*.tar
+*.log
+
+# 🧪 Test and notebook stuff
+*.ipynb_checkpoints
+tests/
+*.ipynb
+*.db
+*.sqlite
+notebooks/
+
+# 💻 IDEs & OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# 🔍 Git & version control
+.git/
+.gitignore

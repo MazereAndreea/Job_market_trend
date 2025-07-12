@@ -1,3 +1,4 @@
+
 from reutilizabile.common_imports import *
 
 def salary_interval(row):
@@ -40,4 +41,3 @@ def company_aggregation(c,low_33,high_67):
         return 'Medium'
     else:
         return 'Large'
-    
