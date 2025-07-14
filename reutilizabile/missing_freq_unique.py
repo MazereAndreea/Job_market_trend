@@ -47,5 +47,6 @@ def unique_values(data):
     tt['Uniques'] = uniques
     return(np.transpose(tt))
 
-def save_changes(data, filename="data.csv"):
+def save_changes(data, filename="clean.csv"):
     data.to_csv(filename, index=False)
+    return data

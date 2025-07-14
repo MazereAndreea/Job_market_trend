@@ -1,4 +1,7 @@
 /.idea
+__init__.py
+usual.txt
+myenv
 git-filter-repo
 /anaconda_projects
 /.ipynb_checkpoints
