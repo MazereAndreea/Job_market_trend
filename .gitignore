@@ -1,4 +1,5 @@
 /.idea
+.streamlit
 __init__.py
 usual.txt
 myenv

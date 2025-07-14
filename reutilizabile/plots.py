@@ -1,11 +1,12 @@
 from reutilizabile.common_imports import sns, plt, ListedColormap, color_list
+import streamlit as st
 
 def plot_count_pairs(data_df, feature, title, hue="set"):
     f, ax = plt.subplots(1, 1, figsize=(8,4))
     sns.countplot(x = feature, data = data_df, hue=hue, palette = color_list)
     plt.grid(color="black",linestyle="-.", linewidth=0.5, axis="y", which="major")
     ax.set_title(f"{title}")
-    plt.show()
+    st.pyplot(f)
 
 
 import matplotlib.pyplot as plt
@@ -50,7 +51,7 @@ def plot_feature_frequency(data_df, feature, title=None, hue=None, horizontal=Tr
         plt.title(f'Frequency of {feature.capitalize()}')
 
     plt.tight_layout()
-    plt.show()
+    st.pyplot(plt.gcf())
 
 
 def plot_distribution_pairs(data_df, feature, title, hue="set"):
@@ -59,10 +60,10 @@ def plot_distribution_pairs(data_df, feature, title, hue="set"):
         g = sns.histplot(data_df.loc[data_df[hue]==h, feature], color = color_list[i], ax=ax, label=h)
     ax.set_title(f"{title}")
     g.legend()
-    plt.show()
+    st.pyplot(f)
 
 def set_color_map(color_list):
     cmap_custom = ListedColormap(color_list)
     sns.palplot(sns.color_palette(color_list))
-    plt.show()
+    st.pyplot(plt.gcf())
     return cmap_custom
