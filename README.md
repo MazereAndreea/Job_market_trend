@@ -14,7 +14,8 @@ Welcome! This repository contains my exploration of **job market trends** using 
 
 - [Job Description Dataset from Kaggle](https://www.kaggle.com/datasets/ravindrasinghrana/job-description-dataset)
   - Contains detailed job descriptions, titles, and related attributes from diverse industries.
-
+- Reddit API
+  - Used to collect relevant posts and comments about jobs, industries, and career perspectives from tech and professional communities, providing real-world insights to complement the analysis.
 ---
 
 ## Project Goals
@@ -32,14 +33,13 @@ I uploaded a comprehensive Jupyter Notebook (around 3,400 lines) where I documen
 
 ### 1. Data Exploration & Cleaning
 - **Loaded the dataset** and reviewed column types and missing values.
-- **Handled missing data:** Identified columns with nulls and chose appropriate strategies (drop, fill, or ignore) for each.
-- **Standardized text fields:** Cleaned job titles, descriptions, and company names (lowercasing, removing punctuation, etc.).
-- **Categorical encoding:** Converted categorical columns (like job type and location) to numerical form for ML algorithms.
+- **Analyzed missing, frequent, and unique values** using custom functions (I moved these functions into a separate file to keep the code modular)
+- **Categorical encoding:** Converted categorical columns (like job title and benefits) to numerical form for ML algorithms using one-hot and multi-hot encoding
+Note: The Kaggle dataset required minimal preprocessing, as it was already well-cleaned. I only performed a few minor adjustments to prepare it for feeding into ML models.
 
 ### 2. Feature Engineering
-- **Extracted skills and keywords** from job descriptions using NLP techniques.
-- **Created new columns:** For example, skills count, keyword presence, job seniority level (based on title), and location clustering.
-- **Transformed date/time fields** to derive insights on job posting trends.
+- **Extracted broader jobs and roles titles** from job descriptions using NLP techniques (feeding embeddings from sentence transformer models to KMeans model)
+- **Created new columns:** For example, Salary (0 (Low), 1 (Medium), 2 (High)), Company size (0 (Small), 1 (Medium), 2 (Large)), Experience (from X to Y Years -> Average experience number), Min and Max Salary
 
 ### 3. Data Visualization
 All visualizations were created in PowerBI and compiled into a dashboard report:
@@ -50,9 +50,8 @@ All visualizations were created in PowerBI and compiled into a dashboard report:
 - **Dashboard Report:** All findings presented in an interactive PowerBI dashboard for easy exploration.
 
 ### 4. Machine Learning Modeling
-- **Built predictive models** (e.g., classification to predict job category, regression for salary estimation).
-- **Evaluated model performance** using metrics like accuracy, F1-score, and RMSE.
-- **Used cross-validation** and hyperparameter tuning for better results.
+- **Built predictive models** (e.g., linear regression and random forest regression for salary estimation).
+- **Evaluated model performance** using metrics like accuracy, F1-score, and RMSE, MSE.
 
 ### 5. Documentation & Explanation
 - Provided detailed comments for each step, explaining the rationale behind every transformation and modeling decision.
@@ -60,9 +59,9 @@ All visualizations were created in PowerBI and compiled into a dashboard report:
 ## 🛠️ Technologies Used
 
 - **Jupyter Notebook** (main development environment)
-- **Python** (`pandas`, `numpy`, `scikit-learn`, `matplotlib`, `seaborn`, and NLP libraries)
+- **Python** (`pandas`, `scikit-learn`, `matplotlib`, `seaborn`, and NLP libraries)
 - **PowerBI** (data visualization and dashboard reporting)
-- **Oracle Autonomous Database & Object Storage** (cloud data management)
+- **Azure Blob Storage** (cloud data management)
 
 ---
 
@@ -80,3 +79,8 @@ As a student interested in data science and machine learning, I wanted to tackle
 
 - This project is for personal learning and experimentation.
 - Feedback, suggestions, and questions are welcome!
+
+## What's next?
+- I plan to collect data directly from Reddit using their API and build a model based on real, live data.
+- Implement ETL data pipeline using Apache Airflow.
+- Build a deep neural network using pytorch and tensorflow
