@@ -19,7 +19,6 @@ import toml
 import joblib
 st.set_page_config(layout="wide")
 
-config = toml.load("config.toml")
 connection_string = st.secrets["AZURE_STORAGE_CONNECTION_STRING"]
 container = st.secrets.get("AZURE_STORAGE_CONTAINER", "jobs")
 blob_name = st.secrets.get("AZURE_STORAGE_BLOB", "job_description.csv")

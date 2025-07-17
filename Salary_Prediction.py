@@ -2,10 +2,11 @@ import streamlit as st
 import numpy as np
 import pandas as pd
 import joblib 
+import toml
 
 # Load your trained model
 model = joblib.load('model1.pkl') 
-
+config = toml.load(".streamlit/config.toml")
 # Streamlit app
 st.title("Salary Prediction App")
 
