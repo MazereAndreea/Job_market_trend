@@ -44,7 +44,7 @@ botocore @ file:///croot/botocore_1738226888291/work
 Bottleneck @ file:///croot/bottleneck_1731058641041/work
 Brotli @ file:///croot/brotli-split_1736182456865/work
 cachetools @ file:///croot/cachetools_1738224668060/work
-certifi @ file:///home/conda/feedstock_root/build_artifacts/certifi_1752115297798/work/certifi
+certifi @ file:///croot/certifi_1752653701669/work/certifi
 cffi @ file:///croot/cffi_1736182485317/work
 chardet @ file:///work/perseverance-python-buildout/croot/chardet_1728402558925/work
 charset-normalizer @ file:///croot/charset-normalizer_1721748349566/work
