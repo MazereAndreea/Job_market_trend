@@ -9,3 +9,5 @@ scikit-learn
 sentence_transformers
 ipywidgets
 torch==2.3.0
+streamlit
+joblib
