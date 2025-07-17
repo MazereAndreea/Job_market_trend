@@ -8,6 +8,8 @@ _A Machine Learning project for personal use_
 
 Welcome! This repository contains my exploration of **job market trends** using data science and machine learning techniques. As part of my learning journey at University Politehnica Bucharest (Industrial Engineering & Robotics), I created this project to practice working with data, build ML models, and gain insights into the ever-evolving job market.
 
+Docker image: https://hub.docker.com/repository/docker/andreeamaz/job_market_trend/general
+
 ---
 
 ## Data Source
