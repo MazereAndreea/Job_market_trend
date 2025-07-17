@@ -1,6 +1,6 @@
 /.idea
 .streamlit
-*.pkl
+model2.pkl
 __init__.py
 usual.txt
 myenv
