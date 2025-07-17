@@ -1,5 +1,5 @@
 /.idea
-.streamlit
+.streamlit/secrets.toml
 model2.pkl
 __init__.py
 usual.txt

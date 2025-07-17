@@ -13,14 +13,14 @@ from sklearn.preprocessing import OneHotEncoder, StandardScaler
 import streamlit as st
 import streamlit.components.v1 as components
 from azure.storage.blob import BlobServiceClient
-from dotenv import load_dotenv
 import joblib
-load_dotenv()
+import toml
 st.set_page_config(layout="wide")
 
-connection_string = os.getenv("AZURE_STORAGE_CONNECTION_STRING")
-container = os.getenv("AZURE_STORAGE_CONTAINER", "jobs")
-blob_name = os.getenv("AZURE_STORAGE_BLOB", "job_description.csv")
+config = toml.load("config.toml")
+connection_string = st.secrets["AZURE_STORAGE_CONNECTION_STRING"]
+container = st.secrets.get("AZURE_STORAGE_CONTAINER", "jobs")
+blob_name = st.secrets.get("AZURE_STORAGE_BLOB", "job_description.csv")
 
 # Decorator to cache functions that return data
 @st.cache_data
