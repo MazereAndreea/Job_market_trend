@@ -1,5 +1,4 @@
-_libgcc_mutex==0.1
-_openmp_mutex==5.1
+
 altair==5.5.0
 aom==3.6.0
 arrow-cpp==19.0.0
