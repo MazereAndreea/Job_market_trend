@@ -28,7 +28,7 @@ def get_data():
 try:
 	df = get_data()
 	st.success("Load successfully")
-	st.dataframe(df.head(50))
+	st.dataframe(df.head())
 except Exception as e:
 	st.error(f"Didn't load successfully because {e}")
 
