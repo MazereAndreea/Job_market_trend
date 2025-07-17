@@ -1,7 +1,7 @@
 import sys
 import os
-from reutilizabile.common_imports import *
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..')))
+from reutilizabile.common_imports import *
 from reutilizabile.blob import load_blob_csv_to_df
 from reutilizabile.plots import *
 from sklearn.linear_model import LogisticRegression
