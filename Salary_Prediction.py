@@ -54,7 +54,7 @@ role_options = ['Social Media & Brand Strategist',
                'Medical & Executive Support Professionals']
 
 # Numerical inputs
-avg_experience = st.number_input("Average Experience (years)", min_value=0.0, max_value=10.0, value=5.0)
+avg_experience = st.number_input("Average Experience (years)", min_value=0, max_value=10, value=5, step = 1)
 job = st.selectbox("Job Area", options=job_options)
 role = st.selectbox("Role cluster", options=role_options)
 bonuses = st.checkbox("Bonuses and Incentive Programs")
