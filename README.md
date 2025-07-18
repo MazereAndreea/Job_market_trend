@@ -10,6 +10,8 @@ Welcome! This repository contains my exploration of **job market trends** using 
 
 Docker image: https://hub.docker.com/repository/docker/andreeamaz/job_market_trend/general
 
+Test the app here: https://mazereandreea-jobmarkettrend.streamlit.app/
+
 ---
 
 ## Data Source
