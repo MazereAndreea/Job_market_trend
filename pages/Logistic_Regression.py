@@ -19,9 +19,9 @@ import toml
 import joblib
 st.set_page_config(layout="wide")
 
-connection_string = st.secrets["AZURE_STORAGE_CONNECTION_STRING"]
-container = st.secrets.get("AZURE_STORAGE_CONTAINER", "jobs")
-blob_name = st.secrets.get("AZURE_STORAGE_BLOB", "job_description.csv")
+# connection_string = st.secrets["AZURE_STORAGE_CONNECTION_STRING"]
+# container = st.secrets.get("AZURE_STORAGE_CONTAINER", "jobs")
+# blob_name = st.secrets.get("AZURE_STORAGE_BLOB", "job_description.csv")
 connection = st.secrets["AZURE_STORAGE_BLOB_URL"]
 
 # Decorator to cache functions that return data
