@@ -18,8 +18,10 @@ __pycache__/
 *.egg
 *.egg-info/
 *.whl
+*.pkl
 dist/
 build/
+usual.txt
 
 # 🐳 Docker & dev artifacts
 Dockerfile~
@@ -44,3 +46,4 @@ Thumbs.db
 # 🔍 Git & version control
 .git/
 .gitignore
+git-filter-repo

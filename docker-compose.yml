@@ -3,7 +3,7 @@ version: "3.8"
 services:
   app:
     build: .
-    container_name: jobmarket_container
+    container_name: jobmarket
     volumes:
       - /home/andreea/compute/app:/app
     ports:

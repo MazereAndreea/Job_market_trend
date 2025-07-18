@@ -1,4 +1,5 @@
-
+import io
+from azure.storage.blob import BlobServiceClient
 from reutilizabile.common_imports import np,pd
 
 def missing_data(data):
@@ -47,5 +48,18 @@ def unique_values(data):
     tt['Uniques'] = uniques
     return(np.transpose(tt))
 
-def save_changes(data, filename="data.csv"):
-    data.to_csv(filename, index=False)
+def save_changes(data, container_name, blob_name, connection_string):
+    # Convert DataFrame to CSV in-memory
+    csv_buffer = io.StringIO()
+    data.to_csv(csv_buffer, index=False)
+    csv_buffer.seek(0)  # Go back to start of buffer
+
+    # Connect
+    blob_service_client = BlobServiceClient.from_connection_string(connection_string)
+    blob_client = blob_service_client.get_blob_client(container=container_name, blob=blob_name)
+
+    # Upload CSV from buffer
+    blob_client.upload_blob(csv_buffer.getvalue(), overwrite=True)
+    print(f"File uploaded to Azure Blob Storage as {blob_name} in container {container_name}")
+
+    return data #for further processing

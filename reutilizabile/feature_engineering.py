@@ -8,9 +8,9 @@ def salary_interval(row):
     max_salary = salary.split(separator)[1]
     max_salary = max_salary[2:].split(separator)[0]
 
-    min_salary = int(min_salary)*1000*4.3
-    max_salary = int(max_salary)*1000*4.3 #to make it ron
-    average_salary = int((min_salary+max_salary)/2)
+    min_salary = float(min_salary) * 1000 * 4.3
+    max_salary = float(max_salary) * 1000 * 4.3
+    average_salary = (min_salary + max_salary) / 2
     return min_salary, max_salary, average_salary
 
 def tercile_label(s,low_33,high_67):

@@ -1,4 +1,9 @@
 /.idea
+.streamlit/secrets.toml
+model2.pkl
+__init__.py
+usual.txt
+myenv
 git-filter-repo
 /anaconda_projects
 /.ipynb_checkpoints
@@ -12,6 +17,7 @@ reutilizabile/__init__.py
 *.csv
 /reutilizabile/.ipynb_checkpoints
 venv/
+*.yml
 env/
 .myenv/
 *.csv

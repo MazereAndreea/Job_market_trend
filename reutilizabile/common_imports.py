@@ -5,4 +5,4 @@ from matplotlib.colors import ListedColormap
 import numpy as np # linear algebra
 import pandas as pd
 
-color_list = ["#a6b5f2","#c381e8","#313663","#111644"]
+color_list = ["#a6b5f2","#f9051b","#0009e97","#111644"]
