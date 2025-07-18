@@ -22,19 +22,21 @@ st.set_page_config(layout="wide")
 connection_string = st.secrets["AZURE_STORAGE_CONNECTION_STRING"]
 container = st.secrets.get("AZURE_STORAGE_CONTAINER", "jobs")
 blob_name = st.secrets.get("AZURE_STORAGE_BLOB", "job_description.csv")
+connection = st.secrets["AZURE_STORAGE_BLOB_URL"]
 
 # Decorator to cache functions that return data
-@st.cache_data
-def get_data():
-	return load_blob_csv_to_df(connection_string, container, blob_name)
+# @st.cache_data
+# def get_data():
+# 	return load_blob_csv_to_df(connection_string, container, blob_name)
 
-try:
-	df = get_data()
-	st.success("Load successfully")
-	st.dataframe(df.head())
-except Exception as e:
-	st.error(f"Didn't load successfully because {e}")
+# try:
+# 	df = get_data()
+# 	st.success("Load successfully")
+# 	st.dataframe(df.head())
+# except Exception as e:
+# 	st.error(f"Didn't load successfully because {e}")
 
+df = pd.read_csv(connection)
 target_column = "Salary_Tercile" #the desired prediction
 feature_columns = [
     "Qualifications",
