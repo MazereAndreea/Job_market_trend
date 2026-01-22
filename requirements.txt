@@ -45,4 +45,4 @@ tornado==6.5.1
 typing-extensions==4.12.2
 urllib3==2.5.0
 watchdog==4.0.2
-wheel==0.42.0
+wheel==0.46.2
